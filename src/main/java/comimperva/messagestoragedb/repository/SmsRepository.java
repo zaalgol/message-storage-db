@@ -13,10 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
     public interface SmsRepository extends CrudRepository<SmsMessage, Long> {
         @Transactional
         @Modifying
-        @Query("delete from SmsMessage where timeStapm < :insertionTimestamp")
+        @Query("delete from SmsMessage where timestapm < :insertionTimestamp")
         void deleteByOldInsertionTimestamp(@Param("insertionTimestamp") long insertionTimestamp);
 
         @Transactional
-        @Query("select s from SmsMessage s ")//where timeStapm < :insertionTimestamp")
+        @Query("select s from SmsMessage s ")//where timestapm < :insertionTimestamp")
         Iterable<SmsMessage> selectOldInsertionTimestamp(@Param("insertionTimestamp") long insertionTimestamp);
     }

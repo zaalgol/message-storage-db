@@ -1,10 +1,10 @@
---DROP TABLE SmsMessage IF EXISTS  ;
+DROP TABLE sms_message IF EXISTS  ;
 
-CREATE TABLE IF NOT EXISTS SmsMessage (
-      timeStapm BIGINT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS sms_message (
+      timestapm BIGINT PRIMARY KEY,
       id INT,
       content VARCHAR(300),
-      senderNumber VARCHAR(20),
-      receiverNumber VARCHAR(20)
+      sender_number VARCHAR(20),
+      receiver_number VARCHAR(20)
 );
 

@@ -10,13 +10,13 @@ import javax.persistence.Id;
 @Entity
 @Data
 public class SmsMessage extends Message {
-    private String senderNumber;
-    private String receiverNumber;
+    private String sender_number;
+    private String receiver_number;
     private String content;
     private int id;
 
     @Id
-    private long timeStapm;
+    private long timestapm;
     public SmsMessage() {
 
     }
@@ -27,7 +27,7 @@ public class SmsMessage extends Message {
 
     public SmsMessage(int id, String senderNumber, String receiverNumber) {
         setId(id);
-        this.senderNumber = senderNumber;
-        this.receiverNumber = receiverNumber;
+        this.sender_number = senderNumber;
+        this.receiver_number = receiverNumber;
     }
 }
